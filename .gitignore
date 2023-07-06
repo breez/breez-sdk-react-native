@@ -67,6 +67,5 @@ lib/
 
 # bindings (excluded until public)
 android/src/main/java/com/breezsdk/breez_sdk.kt
-android/src/main/jniLibs/*
 ios/include/*
 ios/libs/*
