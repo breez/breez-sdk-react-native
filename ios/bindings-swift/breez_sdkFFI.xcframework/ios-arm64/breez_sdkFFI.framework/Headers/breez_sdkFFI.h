@@ -46,191 +46,179 @@ typedef struct RustCallStatus {
 // ⚠️ increment the version suffix in all instances of UNIFFI_SHARED_HEADER_V4 in this file.           ⚠️
 #endif // def UNIFFI_SHARED_H
 
-void ffi_breez_sdk_5d07_BlockingBreezServices_object_free(
+void ffi_breez_sdk_b490_BlockingBreezServices_object_free(
       void*_Nonnull ptr,
     RustCallStatus *_Nonnull out_status
     );
-void breez_sdk_5d07_BlockingBreezServices_start(
+void breez_sdk_b490_BlockingBreezServices_disconnect(
       void*_Nonnull ptr,
     RustCallStatus *_Nonnull out_status
     );
-void breez_sdk_5d07_BlockingBreezServices_stop(
-      void*_Nonnull ptr,
-    RustCallStatus *_Nonnull out_status
-    );
-RustBuffer breez_sdk_5d07_BlockingBreezServices_send_payment(
+RustBuffer breez_sdk_b490_BlockingBreezServices_send_payment(
       void*_Nonnull ptr,RustBuffer bolt11,RustBuffer amount_sats,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_BlockingBreezServices_send_spontaneous_payment(
+RustBuffer breez_sdk_b490_BlockingBreezServices_send_spontaneous_payment(
       void*_Nonnull ptr,RustBuffer node_id,uint64_t amount_sats,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_BlockingBreezServices_receive_payment(
+RustBuffer breez_sdk_b490_BlockingBreezServices_receive_payment(
       void*_Nonnull ptr,uint64_t amount_sats,RustBuffer description,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_BlockingBreezServices_pay_lnurl(
+RustBuffer breez_sdk_b490_BlockingBreezServices_pay_lnurl(
       void*_Nonnull ptr,RustBuffer req_data,uint64_t amount_sats,RustBuffer comment,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_BlockingBreezServices_withdraw_lnurl(
+RustBuffer breez_sdk_b490_BlockingBreezServices_withdraw_lnurl(
       void*_Nonnull ptr,RustBuffer req_data,uint64_t amount_sats,RustBuffer description,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_BlockingBreezServices_lnurl_auth(
+RustBuffer breez_sdk_b490_BlockingBreezServices_lnurl_auth(
       void*_Nonnull ptr,RustBuffer req_data,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_BlockingBreezServices_node_info(
+RustBuffer breez_sdk_b490_BlockingBreezServices_node_info(
       void*_Nonnull ptr,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_BlockingBreezServices_backup_status(
+RustBuffer breez_sdk_b490_BlockingBreezServices_backup_status(
       void*_Nonnull ptr,
     RustCallStatus *_Nonnull out_status
     );
-void breez_sdk_5d07_BlockingBreezServices_backup(
+void breez_sdk_b490_BlockingBreezServices_backup(
       void*_Nonnull ptr,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_BlockingBreezServices_payment_by_hash(
+RustBuffer breez_sdk_b490_BlockingBreezServices_payment_by_hash(
       void*_Nonnull ptr,RustBuffer hash,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_BlockingBreezServices_list_payments(
+RustBuffer breez_sdk_b490_BlockingBreezServices_list_payments(
       void*_Nonnull ptr,RustBuffer filter,RustBuffer from_timestamp,RustBuffer to_timestamp,
     RustCallStatus *_Nonnull out_status
     );
-void breez_sdk_5d07_BlockingBreezServices_sweep(
+void breez_sdk_b490_BlockingBreezServices_sweep(
       void*_Nonnull ptr,RustBuffer to_address,uint64_t fee_rate_sats_per_vbyte,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_BlockingBreezServices_fetch_fiat_rates(
+RustBuffer breez_sdk_b490_BlockingBreezServices_fetch_fiat_rates(
       void*_Nonnull ptr,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_BlockingBreezServices_list_fiat_currencies(
+RustBuffer breez_sdk_b490_BlockingBreezServices_list_fiat_currencies(
       void*_Nonnull ptr,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_BlockingBreezServices_list_lsps(
+RustBuffer breez_sdk_b490_BlockingBreezServices_list_lsps(
       void*_Nonnull ptr,
     RustCallStatus *_Nonnull out_status
     );
-void breez_sdk_5d07_BlockingBreezServices_connect_lsp(
+void breez_sdk_b490_BlockingBreezServices_connect_lsp(
       void*_Nonnull ptr,RustBuffer lsp_id,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_BlockingBreezServices_fetch_lsp_info(
+RustBuffer breez_sdk_b490_BlockingBreezServices_fetch_lsp_info(
       void*_Nonnull ptr,RustBuffer lsp_id,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_BlockingBreezServices_lsp_id(
+RustBuffer breez_sdk_b490_BlockingBreezServices_lsp_id(
       void*_Nonnull ptr,
     RustCallStatus *_Nonnull out_status
     );
-void breez_sdk_5d07_BlockingBreezServices_close_lsp_channels(
+void breez_sdk_b490_BlockingBreezServices_close_lsp_channels(
       void*_Nonnull ptr,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_BlockingBreezServices_receive_onchain(
+RustBuffer breez_sdk_b490_BlockingBreezServices_receive_onchain(
       void*_Nonnull ptr,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_BlockingBreezServices_in_progress_swap(
+RustBuffer breez_sdk_b490_BlockingBreezServices_in_progress_swap(
       void*_Nonnull ptr,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_BlockingBreezServices_list_refundables(
+RustBuffer breez_sdk_b490_BlockingBreezServices_list_refundables(
       void*_Nonnull ptr,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_BlockingBreezServices_refund(
+RustBuffer breez_sdk_b490_BlockingBreezServices_refund(
       void*_Nonnull ptr,RustBuffer swap_address,RustBuffer to_address,uint32_t sat_per_vbyte,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_BlockingBreezServices_fetch_reverse_swap_fees(
+RustBuffer breez_sdk_b490_BlockingBreezServices_fetch_reverse_swap_fees(
       void*_Nonnull ptr,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_BlockingBreezServices_in_progress_reverse_swaps(
+RustBuffer breez_sdk_b490_BlockingBreezServices_in_progress_reverse_swaps(
       void*_Nonnull ptr,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_BlockingBreezServices_send_onchain(
+RustBuffer breez_sdk_b490_BlockingBreezServices_send_onchain(
       void*_Nonnull ptr,uint64_t amount_sat,RustBuffer onchain_recipient_address,RustBuffer pair_hash,uint64_t sat_per_vbyte,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_BlockingBreezServices_execute_dev_command(
+RustBuffer breez_sdk_b490_BlockingBreezServices_execute_dev_command(
       void*_Nonnull ptr,RustBuffer command,
     RustCallStatus *_Nonnull out_status
     );
-void breez_sdk_5d07_BlockingBreezServices_sync(
+void breez_sdk_b490_BlockingBreezServices_sync(
       void*_Nonnull ptr,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_BlockingBreezServices_recommended_fees(
+RustBuffer breez_sdk_b490_BlockingBreezServices_recommended_fees(
       void*_Nonnull ptr,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_BlockingBreezServices_buy_bitcoin(
+RustBuffer breez_sdk_b490_BlockingBreezServices_buy_bitcoin(
       void*_Nonnull ptr,RustBuffer provider,
     RustCallStatus *_Nonnull out_status
     );
-void ffi_breez_sdk_5d07_LogStream_init_callback(
+void ffi_breez_sdk_b490_LogStream_init_callback(
       ForeignCallback  _Nonnull callback_stub,
     RustCallStatus *_Nonnull out_status
     );
-void ffi_breez_sdk_5d07_EventListener_init_callback(
+void ffi_breez_sdk_b490_EventListener_init_callback(
       ForeignCallback  _Nonnull callback_stub,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_register_node(
-      RustBuffer network,RustBuffer seed,RustBuffer register_credentials,RustBuffer invite_code,
+void*_Nonnull breez_sdk_b490_connect(
+      RustBuffer config,RustBuffer seed,uint64_t listener,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_recover_node(
-      RustBuffer network,RustBuffer seed,
-    RustCallStatus *_Nonnull out_status
-    );
-void*_Nonnull breez_sdk_5d07_init_services(
-      RustBuffer config,RustBuffer seed,RustBuffer creds,uint64_t listener,
-    RustCallStatus *_Nonnull out_status
-    );
-void breez_sdk_5d07_set_log_stream(
+void breez_sdk_b490_set_log_stream(
       uint64_t log_stream,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_parse_invoice(
+RustBuffer breez_sdk_b490_parse_invoice(
       RustBuffer invoice,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_parse_input(
+RustBuffer breez_sdk_b490_parse_input(
       RustBuffer s,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_mnemonic_to_seed(
+RustBuffer breez_sdk_b490_mnemonic_to_seed(
       RustBuffer phrase,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer breez_sdk_5d07_default_config(
-      RustBuffer env_type,
+RustBuffer breez_sdk_b490_default_config(
+      RustBuffer env_type,RustBuffer api_key,RustBuffer node_config,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer ffi_breez_sdk_5d07_rustbuffer_alloc(
+RustBuffer ffi_breez_sdk_b490_rustbuffer_alloc(
       int32_t size,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer ffi_breez_sdk_5d07_rustbuffer_from_bytes(
+RustBuffer ffi_breez_sdk_b490_rustbuffer_from_bytes(
       ForeignBytes bytes,
     RustCallStatus *_Nonnull out_status
     );
-void ffi_breez_sdk_5d07_rustbuffer_free(
+void ffi_breez_sdk_b490_rustbuffer_free(
       RustBuffer buf,
     RustCallStatus *_Nonnull out_status
     );
-RustBuffer ffi_breez_sdk_5d07_rustbuffer_reserve(
+RustBuffer ffi_breez_sdk_b490_rustbuffer_reserve(
       RustBuffer buf,int32_t additional,
     RustCallStatus *_Nonnull out_status
     );
