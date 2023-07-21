@@ -275,7 +275,7 @@ class BreezSDKModule(reactContext: ReactApplicationContext) : ReactContextBaseJa
     fun nodeInfo(promise: Promise) {
         executor.execute {
             try {
-                let nodeState = getBreezServices().nodeInfo()
+                val nodeState = getBreezServices().nodeInfo()
                 promise.resolve(readableMapOf(nodeState))                
             } catch (e: SdkException) {
                 e.printStackTrace()
