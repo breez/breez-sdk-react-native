@@ -37,7 +37,7 @@ class BreezSDKModule(reactContext: ReactApplicationContext) : ReactContextBaseJa
             return breezServices!!
         }
 
-        throw SdkException.Exception("BreezServices not initialized")
+        throw SdkException.Generic("BreezServices not initialized")
     }
 
     @ReactMethod
@@ -275,14 +275,27 @@ class BreezSDKModule(reactContext: ReactApplicationContext) : ReactContextBaseJa
     fun nodeInfo(promise: Promise) {
         executor.execute {
             try {
-                getBreezServices().nodeInfo()?.let {nodeState->
-                    promise.resolve(readableMapOf(nodeState))
-                } ?: run {
-                    promise.reject(TAG, "No available node info")
-                }
+                let nodeState = getBreezServices().nodeInfo()
+                promise.resolve(readableMapOf(nodeState))                
             } catch (e: SdkException) {
                 e.printStackTrace()
                 promise.reject(TAG, e.message ?: "Error calling nodeInfo", e)
+            }
+        }
+    }
+
+    @ReactMethod
+    fun paymentByHash(hash: String, promise: Promise) {
+        executor.execute {
+            try {
+                getBreezServices().paymentByHash(hash)?.let {payment->
+                    promise.resolve(readableMapOf(payment))
+                } ?: run {
+                    promise.reject(TAG, "No available payment")
+                }
+            } catch (e: SdkException) {
+                e.printStackTrace()
+                promise.reject(TAG, e.message ?: "Error calling paymentByHash", e)
             }
         }
     }
